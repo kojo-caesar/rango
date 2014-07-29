@@ -6,3 +6,7 @@ def index(request):
 	context_dict = {'boldmessage': "I am bold font from the context"}
 	return render_to_response('rango/index.html', context_dict, context)
 	# return HttpResponse("Hello world!")
+def about(request):
+	context = RequestContext(request)
+	context_dict = {'about_msg' : "I am Rango with whom you'll tango."}
+	return render_to_response('rango/about.html', context_dict, context)
